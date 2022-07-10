@@ -1,13 +1,13 @@
 @charset "utf-8";
 /* ==========================================================================
-   1. CSS Reset Code
-   ========================================================================== */
+1. CSS Reset Code
+========================================================================== */
 
 /* 1.1. Eric Meyers Reset
-   http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-   ========================================================================== */
+http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+========================================================================== */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
 ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
@@ -70,7 +70,7 @@ sup { top: -.7em; }
 sub { bottom: -.25em; }
 
 /* 1.2. Clear Fix
-   ========================== */
+========================== */
 
 .cf:before,
 .cf:after {
@@ -103,52 +103,92 @@ li {
   width: 86%; 
   margin: 0 auto;
 }
+
+*,
+*::before ,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 /*=================================
-  Header styling starts here
+Header styling starts here
 =================================*/
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #417FB6;
+  color: #fff;
+}
+
+.container {
+  padding: 30px;
+  border-radius: 5px;
+  background-color: #284C6E;
+}
+
+.container h1 { 
+  margin-bottom: 20px;
+  font-size: 25px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.container a { color: #417FB6; }
+
+.form-input { 
+  margin: 20px 0 30px;
+  position: relative;
+}
+
+.form-input input {
+  width: 100%;
+  padding: 15px 0;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  display: block;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+}
+
+.form-input input:focus , 
+.form-input input:valid { outline: 0; }
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #AAD5E7;
+  border-radius: 5px;
+  margin: 20px 0;
+  background-color: #AAD5E7;
+  color: #284C6E;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.login-btn:hover { background-color: #fff; }
+ p a:hover { color: goldenrod; }
+
+.form-input label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+.active {
+  display: inline-block;
+  transform: translateY(-28px);
+  color: #fff;
+}
 
 
-
-
-
-
-/*=================================
-  Header styling ends here
-=================================*/  
-
-/*=================================
-  main styling starts here
-=================================*/
-
-
-
-
-
-
-
-
-/*=================================
-  main styling ends here
-=================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
+.inactive {
+  display: inline-block;
+  transform: translateY(0);
+  color: #fff;
+}
